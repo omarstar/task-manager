@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const conn_URL =
-  "mongodb+srv://star-user:5T@rU53r@star-lab.q7ctf.mongodb.net/TASK-MANAGER?retryWrites=true&w=majority";
+const conn_URL = process.env.MONGO_URI;
 
 const connectDB = (url) => {
   return mongoose.connect(conn_URL, {
